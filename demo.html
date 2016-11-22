@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		#test {
+			height: 50px;
+			width: 50px;
+			background-color: red;
+			position: absolute;
+			border: 5px solid black;
+			top: 20px;
+		}
+	</style>
+	<script src="anime.js"></script>
+</head>
+<body>
+	<button id="btn">test</button>
+	<div id="test">test</div>
+	<script>
+		var div = document.getElementById('test');
+		var btn = document.getElementById('btn');
+
+		btn.onclick = function() {
+			anime(div, {
+				left: "200px",
+			}, 300, function(){
+				anime(div, {
+					left: '0',
+				}, 300)
+			})
+		}
+
+	</script>
+</body>
+</html>
