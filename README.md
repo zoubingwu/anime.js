@@ -1,9 +1,9 @@
 # anime.js
-for javascript animation
+for basic javascript animation
 
 ## about
 
-Anime.js is a light JavaScript library like jQuery animate method but it supports non-digit values like rotate() or translate(), it makes CSS3 backed animation much more simple and elegant.
+Anime.js is a light JavaScript library like jQuery animate method, it makes js animation much more simple and you don't have to import all the jquery libraray.
 
 ## using
 
@@ -15,18 +15,18 @@ Anime.js is a light JavaScript library like jQuery animate method but it support
 
 - ***element:***
 
-​	javascript dom element
+  dom element
 
 - ***prop:***
 
-​	the css properties, support json type data just like jQuery animate() method
+  ​the css properties, support json type data just like jQuery animate() method
 
 - ***duration:***
 
   mileseconds
 
 
-- ***callback:***
+- ***callback:*** (optional)
 
   callback function
 
@@ -38,7 +38,6 @@ var div = document.getElementById("test");
 anime(div, {
   left: "300px",
   opacity: "0",
-  transform: "rotate(180deg)"
 }, 200, function(){
   alert("finished!");
 })
